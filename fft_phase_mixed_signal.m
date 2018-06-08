@@ -16,7 +16,7 @@ y = b*cos(2*pi*t*f2+ph_2);
 z = x+y;
 
 Z_fft = fft(z);
-threshold = max(abs(Z))/10000;
+threshold = max(abs(Z_fft))/10000;
 Z = Z_fft;
 Z(abs(Z_fft)<threshold) = 0;
 
